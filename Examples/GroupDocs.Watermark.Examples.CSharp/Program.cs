@@ -16,7 +16,7 @@ namespace GroupDocs.Watermark.Examples.CSharp
              *  Applying product license
              *  Please uncomment the statement if you do have license.
              */
-            Utilities.ApplyLicense();
+            //Utilities.ApplyLicense();
             //ExEnd:ApplyingLicense
 
 
@@ -183,6 +183,18 @@ namespace GroupDocs.Watermark.Examples.CSharp
 
             // Remove watermark from section
             //Documents.Word.RemoveWatermarkFromSection();
+
+            // Replace text for particular shape
+            //Documents.Word.ReplaceTextForParticularShape();
+
+            // Replace shape text with formatted text
+            //Documents.Word.ReplaceShapeTextWithFormattedText();
+
+            // Replace shape image
+            //Documents.Word.ReplaceShapeImage();
+
+            // Modify shape properties
+            //Documents.Word.ModifyShapeProperties();
             #endregion
 
             #region Working with Excel Documents
@@ -318,6 +330,21 @@ namespace GroupDocs.Watermark.Examples.CSharp
 
             //Remove hyperlinks of all types using FindWatermarks method
             //Documents.PowerPoint.RemoveHyperlinksUsingFindWatermark();
+
+            // Replace text for a particular shape
+            //Documents.PowerPoint.ReplaceTextForParticularShape();
+
+            // Replace text with a particular formatting
+            //Documents.PowerPoint.ReplaceTextWithParticularFormatting();
+
+            // Replace shape image
+            //Documents.PowerPoint.ReplaceShapeImage();
+
+            // Set background image for particular shapes
+            //Documents.PowerPoint.SetBackgroundImageForParticularShapes();
+
+            // Modify shape properties
+            //Documents.PowerPoint.ModifyShapeProperties();
             #endregion
 
             #region Working with Visio Documents
@@ -354,6 +381,15 @@ namespace GroupDocs.Watermark.Examples.CSharp
 
             // Remove a particular shape
             //Documents.Visio.RemoveShape();
+
+            //Replace text for particular shapes
+            //Documents.Visio.ReplaceTextForParticularShapes();
+
+            //Replace text with formatting
+            //Documents.Visio.ReplaceTextWithFormatting();
+
+            // Replace shape image
+            //Documents.Visio.ReplaceShapeImage();
             #endregion
 
             #region Working with Emails
@@ -388,6 +424,7 @@ namespace GroupDocs.Watermark.Examples.CSharp
             //Documents.Email.SearchTextInBody();
 
             #endregion
+
             Console.Write("Operation completed...");
             Console.ReadKey();
         }
