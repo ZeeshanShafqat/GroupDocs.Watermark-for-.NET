@@ -1,0 +1,35 @@
+using GroupDocs.Watermark.Contents.Spreadsheet;
+using GroupDocs.Watermark.Options.Spreadsheet;
+using System.IO;
+using System;
+
+namespace GroupDocs.Watermark.Examples.CSharp.AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets
+{
+    /// <summary>
+    /// This example shows how to remove a particular shape from the worksheet.
+    /// </summary>
+    public static class SpreadsheetRemoveShape
+    {
+        public static void Run()
+        {
+            Console.WriteLine($"[Example Advanced Usage] # {typeof(SpreadsheetRemoveWorksheetBackground).Name}\n");
+
+            string documentPath = Constants.InSpreadsheetXlsx;
+            string outputFileName = Path.Combine(Constants.GetOutputDirectoryPath(), Path.GetFileName(documentPath));
+
+            var loadOptions = new SpreadsheetLoadOptions();
+            using (Watermarker watermarker = new Watermarker(documentPath, loadOptions))
+            {
+                SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
+
+                // Remove shape by index
+                content.Worksheets[0].Shapes.RemoveAt(0);
+
+                // Remove shape by reference
+                content.Worksheets[0].Shapes.Remove(content.Worksheets[0].Shapes[0]);
+
+                watermarker.Save(outputFileName);
+            }
+        }
+    }
+}
